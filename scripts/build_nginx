@@ -46,6 +46,9 @@ echo "Downloading $headers_more_nginx_module_url"
 echo "Downloading $uuid4_url"
 (cd nginx-${NGINX_VERSION} && curl -L $uuid4_url | tar xvz )
 
+echo "Downloading $http_substitutions_filter_url"
+(cd nginx-${NGINX_VERSION} && curl -L $http_substitutions_filter_url | tar xvz )
+
 (
   cd nginx-${NGINX_VERSION}
   ./configure \
